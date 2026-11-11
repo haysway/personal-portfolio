@@ -1,16 +1,38 @@
-# React + Vite
+# Hayden Swain-Schmit | Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio built with React and Vite. It introduces me, shares my education and experience, and showcases projects in a browsable gallery.
 
-Currently, two official plugins are available:
+## Pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Home** — introduction, GitHub profile link, and downloadable resume.
+- **About** — education, relevant coursework, technical skills, and work experience.
+- **Gallery** — project list and individual project detail pages.
 
-## React Compiler
+The gallery loads project data from Firebase Realtime Database.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run locally
 
-## Expanding the ESLint configuration
+Install dependencies and start the Vite development server:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```sh
+npm install
+npm run dev
+```
+
+Open the local URL printed by Vite in your terminal.
+
+## Available commands
+
+```sh
+npm run dev      # Start the development server
+npm run build    # Create a production build in dist/
+npm run preview  # Preview the production build locally
+npm run lint     # Run ESLint
+```
+
+## Portfolio assets
+
+- The home page profile image is `src/assets/me.jpg`.
+- The home page imports the downloadable resume from `src/assets/resume.pdf`.
+
+Keep the resume at that path (or update the import in `src/pages/HomePage.jsx` if you move it).
