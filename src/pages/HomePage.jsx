@@ -1,4 +1,5 @@
-import profileImage from '../assets/me.png';
+import profileImage from '../assets/me.jpg';
+import resumeUrl from '../assets/resume.pdf';
 
 function HomePage() {
   return (
@@ -8,11 +9,27 @@ function HomePage() {
         <img src={profileImage} alt="Hayden Swain-Schmit" className="profile-picture" />
       </div>
       <p>
-        My name is Hayden Swain-Schmit. I will be graduating from Weber State University with
-        my bachelors in Computer Science in December of 2026. I currently work part time at Northrop Grumman
-        developing computational software for ballisticians. My goals are to continue learning as many different frameworks and tools
-        as I can and continuing to develop my skill set!
+        I'm Hayden Swain-Schmit, a Computer Science student at Weber State University, graduating with my bachelor's degree in December 2026. I currently work part-time at Northrop Grumman, where I develop computational software supporting ballistic analysis.
+        I'm interested in building software, exploring new technologies, and understanding how things work under the hood. I enjoy tackling unfamiliar problems, learning new frameworks and tools, and expanding my skill set through hands-on projects. I'm always looking for opportunities to take on new challenges and turn what I learn into something useful.
       </p>
+
+      <div className="home-actions">
+        <a
+          className="home-action-link"
+          href="https://github.com/haysway"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+        <a
+          className="home-action-link home-resume-link"
+          href={resumeUrl}
+          download="Hayden-Swain-Schmit-Resume.pdf"
+        >
+          Download resume
+        </a>
+      </div>
     </section>
   );
 }

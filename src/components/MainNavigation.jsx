@@ -16,11 +16,6 @@ function MainNavigation() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/contact" end>
-              Contact
-            </NavLink>
-          </li>
-          <li>
             <NavLink to="/about" end>
               About
             </NavLink>

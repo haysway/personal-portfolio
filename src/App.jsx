@@ -1,13 +1,10 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
+import { Outlet, createBrowserRouter, RouterProvider } from 'react-router-dom';
 import RootLayout from './pages/RootLayout';
 import HomePage from './pages/HomePage';
 import ErrorPage from './pages/ErrorPage';
 import AboutPage from './pages/AboutPage';
 import GalleryPage, { projectsLoader } from './pages/GalleryPage';
 import ProjectDetailPage, { projectDetailLoader } from './pages/ProjectDetailPage';
-import ContactPage from './pages/ContactPage';
-import { newContactAction } from './components/ContactForm';
 
 const router = createBrowserRouter([
   {
@@ -41,12 +38,7 @@ const router = createBrowserRouter([
       {
         path: 'about',
         element: <AboutPage />
-      },
-      {
-        path: 'contact',
-        element: <ContactPage />,
-        action: newContactAction
-      },
+      }
     ]
   }
 ])

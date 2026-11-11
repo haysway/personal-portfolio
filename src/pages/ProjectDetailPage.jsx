@@ -16,9 +16,9 @@ function ProjectDetailPage() {
 
 export default ProjectDetailPage;
 
-export async function projectDetailLoader( { request, params }) {
+export async function projectDetailLoader( { params }) {
     const id = params.projectId;
-    const response = await fetch('http://localhost:3000/projects/' + id);
+    const response = await fetch(`https://portfolio-b96ae-default-rtdb.firebaseio.com/projects/${id}.json`);
 
     if (!response.ok) {
         throw new Response(
@@ -26,6 +26,18 @@ export async function projectDetailLoader( { request, params }) {
             { status: 500 }
         );
     } else {
-        return response;
+        const data = await response.json();
+
+        if (!data) {
+            throw new Response(
+                JSON.stringify({
+                    title: 'Not found',
+                    message: 'Could not find selected project.'
+                }),
+                { status: 404 }
+            );
+        }
+
+        return data;
     }
 }
